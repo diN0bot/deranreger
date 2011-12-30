@@ -1,4 +1,3 @@
-
 ## Goals
 
 - Investigate technology new to me:
@@ -20,10 +19,10 @@ I'd like an app that helps me answer this question. Some of the required feature
 
 ## ToDo
 
-[ ] Setup EC2 and elastic search
-[ ] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
-[ ] Learn GCL like whoa and iterate on viz
-[ ] Once viz stabilizes, set up elastic search for real backed by Cassandra
+- [ ] Setup EC2 and elastic search
+- [ ] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
+- [ ] Learn GCL like whoa and iterate on viz
+- [ ] Once viz stabilizes, set up elastic search for real backed by Cassandra
 
 ## Technology
 
