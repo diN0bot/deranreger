@@ -40,3 +40,9 @@ Setting up Django with Gunicorn on an EC2 instance - http://adrian.org.ar/python
 ### Elastic Search
 
 Putting elastic search on Ec2 - http://www.elasticsearch.org/tutorials/2011/08/22/elasticsearch-on-ec2.html
+
+For reference - https://github.com/aparo/django-elasticsearch
+
+###
+
+For reference - https://github.com/vaterlaus/django_cassandra_backend
