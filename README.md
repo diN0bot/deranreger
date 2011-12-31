@@ -7,7 +7,7 @@ Demo
 Development Setup
 -----------------
 
-**Install dependencies: Django**
+**Install dependency: Django**
 
 ```
 #install Python Package Installer
@@ -16,7 +16,6 @@ sudo apt-get install python-pip
 sudo pip install pip --upgrade
 #installing Django
 pip install django
-
 ```
 
 **Get code and run development web server**
@@ -24,9 +23,9 @@ pip install django
 ```
 git clone git@github.com:diN0bot/deranreger.git
 cd deranreger
+export PYTHONPATH=./:extern/:$PYTHONPATH
 python manage.py syncdb
 python manage.py runserver
-
 ```
 
 Visit `127.0.0.1:8000` and `127.0.0.1:8000/a/data` in a browser.
@@ -82,6 +81,8 @@ Setting up Django with Gunicorn on an EC2 instance - http://adrian.org.ar/python
 Putting elastic search on Ec2 - http://www.elasticsearch.org/tutorials/2011/08/22/elasticsearch-on-ec2.html
 
 For reference - https://github.com/aparo/django-elasticsearch
+
+Dev console - http://mobz.github.com/elasticsearch-head
 
 **Cassandra**
 
