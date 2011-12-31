@@ -2,6 +2,8 @@ from django import http
 from django.utils import simplejson as json
 from django.views.generic.base import View
 from django.views.generic.edit import FormMixin
+import pyes
+from django.conf import settings
 
 
 __all__ = ["BaseJSONView"]
@@ -27,10 +29,26 @@ class JSONResponseMixin(object):
         return json.dumps(context)
 
 
-class BaseJSONView(FormMixin, View, JSONResponseMixin):
+class ElasticSearchMixin(object):
+
+    def retrieve_data(self):
+        conn = pyes.ES(settings.ELASTICSEARCH_CLUSTER[0])
+        query = pyes.WildcardQuery("_all", "*")
+        data = conn.search(query=query)
+        ret = []
+        for doc in data:
+            newdoc = {}
+            for key in doc:
+                if key != 'meta':
+                    newdoc[key] = doc[key]
+            ret.append(newdoc)
+        return ret
+
+
+class BaseJSONView(FormMixin, View, JSONResponseMixin, ElasticSearchMixin):
 
     def form_valid(self, form, request):
-        form.save()
+        #response = self._es_conn.index(form.document())
         return self.api_response(self.success_message)
 
     def form_invalid(self, form):
@@ -40,7 +58,8 @@ class BaseJSONView(FormMixin, View, JSONResponseMixin):
         return self.render_to_response(data)
 
     def get(self, request, *args, **kwargs):
-        return self.api_response(data={'hello':'world'})
+        data = self.retrieve_data()
+        return self.api_response(data={'data': data})
 
     def post(self, request, *args, **kwargs):
         form = self.get_form(self.get_form_class())
