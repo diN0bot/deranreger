@@ -70,7 +70,9 @@ Technology
 
 Source code - http://code.google.com/p/closure-library/source/checkout
 
-Intro to Google Closure Library 1hr presentation - http://www.youtube.com/watch?v=yp_9q3tgDnQ
+http://code.google.com/intl/de-DE/closure/library/docs/overview.html
+
+(not so good) Intro to Google Closure Library 1hr presentation - http://www.youtube.com/watch?v=yp_9q3tgDnQ
 
 **Amazon Services**
 
