@@ -7,7 +7,7 @@ Demo
 Development Setup
 -----------------
 
-**Install dependency: Django**
+**Install dependencies: Django, pyes**
 
 ```
 #install Python Package Installer
@@ -16,6 +16,11 @@ sudo apt-get install python-pip
 sudo pip install pip --upgrade
 #installing Django
 pip install django
+#installing pyes
+git clone https://github.com/aparo/pyes.git
+cd pyes
+python setup.py build
+sudo python setup.py install
 ```
 
 **Get code and run development web server**
@@ -23,8 +28,7 @@ pip install django
 ```
 git clone git@github.com:diN0bot/deranreger.git
 cd deranreger
-export PYTHONPATH=./:extern/:$PYTHONPATH
-python manage.py syncdb
+#python manage.py syncdb
 python manage.py runserver
 ```
 
