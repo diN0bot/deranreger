@@ -61,9 +61,9 @@ I'd like an app that helps me answer this question. Some of the required feature
 ToDo
 ----
 
-- [ ] Setup EC2 and elastic search
-- [ ] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
-- [ ] Learn GCL like whoa and iterate on viz
+- [X] Setup EC2 and elastic search
+- [\] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
+- [`] Learn GCL like whoa and iterate on viz
 - [ ] Once viz stabilizes, set up elastic search for real backed by Cassandra
 
 
@@ -93,3 +93,14 @@ Dev console - http://mobz.github.com/elasticsearch-head
 **Cassandra**
 
 For reference - https://github.com/vaterlaus/django_cassandra_backend
+
+**Orthogonal Tools**
+
+These don't have quite the same data goals or displays, but some data does fit more naturally into these tools---eg, recurring events---so think on this kind of extensibility.
+
+- https://www.beeminder.com/meta/blog
+- http://idonethis.com/
+- http://www.joesgoals.com/
+- http://daytum.com/
+- http://itunes.apple.com/us/app/dayta/id354915346?mt=8
+- http://your.flowingdata.com/
