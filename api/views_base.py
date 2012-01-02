@@ -3,6 +3,7 @@ from django.utils import simplejson as json
 from django.views.generic.base import View
 from django.views.generic.edit import FormMixin
 import pyes
+from time import mktime
 from django.conf import settings
 
 
@@ -10,9 +11,11 @@ __all__ = ["BaseJSONView"]
 
 
 class JSONResponseMixin(object):
-    def render_to_response(self, context):
+    structure_definitions = {'datetime': lambda dt: int(mktime(dt.timetuple())) }
+
+    def render_to_response(self, adict):
         "Returns a JSON response containing 'context' as payload"
-        return self.get_json_response(self.convert_context_to_json(context))
+        return self.get_json_response(self.convert_context_to_json(adict))
 
     def get_json_response(self, content, **httpresponse_kwargs):
         "Construct an `HttpResponse` object."
@@ -20,13 +23,17 @@ class JSONResponseMixin(object):
                                  content_type='application/json',
                                  **httpresponse_kwargs)
 
-    def convert_context_to_json(self, context):
+    def convert_context_to_json(self, adict):
         "Convert the context dictionary into a JSON object"
-        # Note: This is *EXTREMELY* naive; in reality, you'll need
-        # to do much more complex handling to ensure that arbitrary
-        # objects -- such as Django model instances or querysets
-        # -- can be serialized as JSON.
-        return json.dumps(context)
+        self._smash(adict)
+        return json.dumps(adict)
+
+    def _smash(self, adict):
+        for key, value in adict.iteritems():
+            try:
+                adict[key] = self.structure_definitions[value.__class__.__name__](value)
+            except KeyError:
+                pass
 
 
 class ElasticSearchMixin(object):
