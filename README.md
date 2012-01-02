@@ -9,7 +9,7 @@ Development Setup
 
 **Install dependencies: Django, pyes**
 
-```
+```bash
 #install Python Package Installer
 sudo apt-get install python-pip
 #upgrade PIP itself
@@ -25,7 +25,7 @@ sudo python setup.py install
 
 **Get code and run development web server**
 
-```
+```bash
 git clone git@github.com:diN0bot/deranreger.git
 cd deranreger
 #python manage.py syncdb
