@@ -54,9 +54,14 @@ What are the connections between what I do and how I feel?
 I'd like an app that helps me answer this question. Some of the required features:
 
 - Easy to record what I do and how I feel.
+  - I liked inputting on a calendar view rather than forms, eg https://github.com/diN0bot/iCal-Analyzer
 - Sensible visualizations.
+  - Calendar view
+  - [Beeminder charts](https://www.beeminder.com)
+  - [Boolean charts](http://idonethis.com/)
 - Interesting analysis.
-
+  - Reminders
+  - Randomness v correlations
 
 ToDo
 ----
