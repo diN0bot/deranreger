@@ -67,8 +67,8 @@ ToDo
 ----
 
 - [X] Setup EC2 and elastic search
+- [\] Learn GCL like whoa and iterate on viz
 - [\] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
-- [`] Learn GCL like whoa and iterate on viz
 - [ ] Once viz stabilizes, set up elastic search for real backed by Cassandra
 
 
@@ -78,6 +78,8 @@ Technology
 **Google Closure Library**
 
 Source code - http://code.google.com/p/closure-library/source/checkout
+
+http://code.google.com/p/closure-library/wiki/IntroToComponents
 
 http://code.google.com/intl/de-DE/closure/library/docs/overview.html
 
