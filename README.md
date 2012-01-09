@@ -83,6 +83,10 @@ http://code.google.com/p/closure-library/wiki/IntroToComponents
 
 http://code.google.com/intl/de-DE/closure/library/docs/overview.html
 
+http://teebes.com/blog/19/playing-with-googles-closure-js-library
+
+https://gist.github.com/153b154227aeb1a5acd7
+
 (not so good) Intro to Google Closure Library 1hr presentation - http://www.youtube.com/watch?v=yp_9q3tgDnQ
 
 **Amazon Services**
