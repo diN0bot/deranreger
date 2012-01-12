@@ -39,11 +39,11 @@ Goals
 -----
 
 - Investigate technology new to me:
-  - Google Closure Library, elastic search, cassandra
-  - Create abstractions layers on top by scratch
+  - Google Closure Library, elastic search, cassandra, node.js
+  - Create as much as possible from scratch to learn nuts and bolts
 - Make a cool system and app:
-  1. Iterate on visualization
-  1. Once using for real, iterate on data analysis.
+  - Top-Down "Viz/UX" based iteration
+  - Data analysis
 
 
 The App: Event Analyzer
@@ -68,6 +68,7 @@ ToDo
 
 - [X] Setup EC2 and elastic search
 - [\] Learn GCL like whoa and iterate on viz
+- [ ] Learn node.js, forget Django
 - [\] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
 - [ ] Once viz stabilizes, set up elastic search for real backed by Cassandra
 
@@ -101,9 +102,15 @@ For reference - https://github.com/aparo/django-elasticsearch
 
 Dev console - http://mobz.github.com/elasticsearch-head
 
+**Node.js**
+
+npm - https://sites.google.com/site/nodejsmacosx/
+
 **Cassandra**
 
 For reference - https://github.com/vaterlaus/django_cassandra_backend
+
+For node - http://code.google.com/a/apache-extras.org/p/cassandra-node/
 
 **Orthogonal Tools**
 
