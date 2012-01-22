@@ -1,0 +1,10 @@
+extends layout
+
+block scripts
+    script(src='http://localhost:80/socket.io/socket.io.js')
+    script(src='/js/socketio_client.js')
+
+block body
+    h1= title
+    p Welcome to #{title}
+    p Please check the console for socket.io messages

@@ -7,39 +7,49 @@ Demo
 Development Setup
 -----------------
 
-**Install dependency: Django**
+**Get code**
 
 ```
-#install Python Package Installer
-sudo apt-get install python-pip
-#upgrade PIP itself
-sudo pip install pip --upgrade
-#installing Django
-pip install django
+git checkout git@github.com:diN0bot/deranreger.git
+```
+
+**Install dependencies: node.js, express, socket.io, jade, google closure library**
+
+#Install Google Closure Library
+```
+svn checkout http://closure-library.googlecode.com/svn/trunk/ closure-library
+ln -s closure-library deranreger/webapp/static/js/closure-library
+```
+
+#Install node.js
+```
+open https://sites.google.com/site/nodejsmacosx/
+```
+
+#Install socket.io, express, jade
+```
+npm install socket.io express jade
 ```
 
 **Get code and run development web server**
 
 ```
 git clone git@github.com:diN0bot/deranreger.git
-cd deranreger
-export PYTHONPATH=./:extern/:$PYTHONPATH
-python manage.py syncdb
-python manage.py runserver
+cd deranreger/webapp
+node app.js
 ```
 
-Visit `127.0.0.1:8000` and `127.0.0.1:8000/a/data` in a browser.
+Visit `http://localhost:3000/demos` in a browser.
 
 
 Goals
 -----
 
 - Investigate technology new to me:
-  - Google Closure Library, elastic search, cassandra
-  - Create abstractions layers on top by scratch
-- Make a cool system and app:
+  - Google Closure Library, elastic search, socket.io, node.js, cassandra
+- Make a useful app:
   1. Iterate on visualization
-  1. Once using for real, iterate on data analysis.
+  1. Iterate on data analysis.
 
 
 The App: Event Analyzer
@@ -52,15 +62,6 @@ I'd like an app that helps me answer this question. Some of the required feature
 - Easy to record what I do and how I feel.
 - Sensible visualizations.
 - Interesting analysis.
-
-
-ToDo
-----
-
-- [ ] Setup EC2 and elastic search
-- [ ] With Django, create a generic elasticsearch-proxy API for GCL iterations. 
-- [ ] Learn GCL like whoa and iterate on viz
-- [ ] Once viz stabilizes, set up elastic search for real backed by Cassandra
 
 
 Technology
@@ -76,7 +77,7 @@ http://code.google.com/intl/de-DE/closure/library/docs/overview.html
 
 **Amazon Services**
 
-Setting up Django with Gunicorn on an EC2 instance - http://adrian.org.ar/python/django-nginx-green-unicorn-in-an-ubuntu-11-10-ec2-instance  
+Setting up Django with Gunicorn on an EC2 instance - http://adrian.org.ar/python/django-nginx-green-unicorn-in-an-ubuntu-11-10-ec2-instance
 
 **Elastic Search**
 
@@ -89,3 +90,12 @@ Dev console - http://mobz.github.com/elasticsearch-head
 **Cassandra**
 
 For reference - https://github.com/vaterlaus/django_cassandra_backend
+
+
+**Ql.io**
+
+http://ql.io/docs/build-an-app
+
+**Hook.io**
+
+https://github.com/hookio/hook.io

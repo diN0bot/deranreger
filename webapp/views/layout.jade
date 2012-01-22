@@ -1,0 +1,17 @@
+!!!
+html
+    head
+        title= title
+        link(rel='icon', type='image/png', href='/img/favicon.png')
+        link(rel='shortcut icon', href='/img/favicon.png')
+
+        link(rel='stylesheet', href='/css/bootstrap.min.css')
+
+        script(src='/js/closure-library/closure/goog/base.js')
+
+        block scripts
+
+    body
+        .container
+            .content
+                block body

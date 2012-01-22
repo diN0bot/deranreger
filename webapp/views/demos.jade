@@ -1,0 +1,16 @@
+extends layout
+
+block scripts
+    script(src='/js/deranreger/requires.js')
+    script(src='/js/deranreger/widgets/item.js')
+    script(src='/js/deranreger/main.js')
+
+block body
+    h1= title
+    p Welcome to #{title}
+
+    h2= 'sandbox'
+    #sandbox
+
+    - var call_main = "<script>main()</script>"
+    | !{call_main}
