@@ -4,6 +4,8 @@ Demo
 - Website: http://ec2-107-20-75-182.compute-1.amazonaws.com
 - API: http://ec2-107-20-75-182.compute-1.amazonaws.com/a/data
 
+(right now I only run these when I demo)
+
 Development Setup
 -----------------
 
