@@ -15,27 +15,29 @@ git checkout git@github.com:diN0bot/deranreger.git
 
 **Install dependencies: node.js, express, socket.io, jade, google closure library**
 
-#Install Google Closure Library
+* Install Google Closure Library
+
 ```
 svn checkout http://closure-library.googlecode.com/svn/trunk/ closure-library
 ln -s closure-library deranreger/webapp/static/js/closure-library
 ```
 
-#Install node.js
+* Install node.js
+
 ```
 open https://sites.google.com/site/nodejsmacosx/
 ```
 
-#Install socket.io, express, jade
+* Install socket.io, express, jade
+
 ```
 npm install socket.io express jade
 ```
 
-**Get code and run development web server**
+**Run development web server**
 
-```
-git clone git@github.com:diN0bot/deranreger.git
-cd deranreger/webapp
+```bash
+cd deranreger
 node app.js
 ```
 
@@ -60,8 +62,14 @@ What are the connections between what I do and how I feel?
 I'd like an app that helps me answer this question. Some of the required features:
 
 - Easy to record what I do and how I feel.
+  - I liked inputting on a calendar view rather than forms, eg https://github.com/diN0bot/iCal-Analyzer
 - Sensible visualizations.
+  - Calendar view
+  - [Beeminder charts](https://www.beeminder.com)
+  - [Boolean charts](http://idonethis.com/)
 - Interesting analysis.
+  - Reminders
+  - Randomness v correlations
 
 
 Technology
@@ -71,7 +79,13 @@ Technology
 
 Source code - http://code.google.com/p/closure-library/source/checkout
 
+http://code.google.com/p/closure-library/wiki/IntroToComponents
+
 http://code.google.com/intl/de-DE/closure/library/docs/overview.html
+
+http://teebes.com/blog/19/playing-with-googles-closure-js-library
+
+https://gist.github.com/153b154227aeb1a5acd7
 
 (not so good) Intro to Google Closure Library 1hr presentation - http://www.youtube.com/watch?v=yp_9q3tgDnQ
 
@@ -87,10 +101,15 @@ For reference - https://github.com/aparo/django-elasticsearch
 
 Dev console - http://mobz.github.com/elasticsearch-head
 
+**Node.js**
+
+npm - https://sites.google.com/site/nodejsmacosx/
+
 **Cassandra**
 
 For reference - https://github.com/vaterlaus/django_cassandra_backend
 
+For node - http://code.google.com/a/apache-extras.org/p/cassandra-node/
 
 **Ql.io**
 
@@ -99,3 +118,14 @@ http://ql.io/docs/build-an-app
 **Hook.io**
 
 https://github.com/hookio/hook.io
+
+**Orthogonal Tools**
+
+These don't have quite the same data goals or displays, but some data does fit more naturally into these tools---eg, recurring events---so think on this kind of extensibility.
+
+- https://www.beeminder.com/meta/blog
+- http://idonethis.com/
+- http://www.joesgoals.com/
+- http://daytum.com/
+- http://itunes.apple.com/us/app/dayta/id354915346?mt=8
+- http://your.flowingdata.com/
