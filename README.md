@@ -28,6 +28,8 @@ ln -s closure-library deranreger/webapp/static/js/closure-library
 
 ```
 open https://sites.google.com/site/nodejsmacosx/
+or
+sudo apt-get install nodejs
 ```
 
 * Install socket.io, express, jade
