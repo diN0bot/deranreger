@@ -93,6 +93,8 @@ https://gist.github.com/153b154227aeb1a5acd7
 
 **Amazon Services**
 
+Console - https://console.aws.amazon.com/console/home
+
 Setting up Django with Gunicorn on an EC2 instance - http://adrian.org.ar/python/django-nginx-green-unicorn-in-an-ubuntu-11-10-ec2-instance
 
 **Elastic Search**
